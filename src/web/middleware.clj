@@ -4,6 +4,7 @@
     ;[reitit.ring.middleware.parameters :as parameters]
     [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
     [ring.middleware.multipart-params :refer [wrap-multipart-params]]
+    [ring.middleware.nested-params :refer [wrap-nested-params]]
     [ring.middleware.params :refer [wrap-params]]
     [ring.middleware.session :as ring-session]
     [ring.util.response :as resp]
@@ -115,6 +116,7 @@
    ;; TODO: explanations for these in particular
    wrap-params
    wrap-multipart-params
+   wrap-nested-params
    ;parameters/parameters-middleware
    ;multipart/multipart-middleware
    wrap-anti-forgery
